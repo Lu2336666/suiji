@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>随机数</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icon-180.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>随机数</h1>
+      <p>点一下，出数字</p>
+    </header>
+
+    <div class="board" id="board">
+      <div class="placeholder" id="placeholder">还没抽</div>
+      <div class="nums hidden" id="nums"></div>
+    </div>
+
+    <div class="panel">
+      <div class="presets" id="presets"></div>
+      <div class="fields">
+        <label>最小 <input id="min" type="number" inputmode="numeric" value="1" /></label>
+        <label>最大 <input id="max" type="number" inputmode="numeric" value="100" /></label>
+        <label>几个 <input id="count" type="number" inputmode="numeric" min="1" max="200" value="1" /></label>
+      </div>
+      <div class="toggles">
+        <button type="button" class="tog on" id="btnUnique" aria-pressed="true">不重复</button>
+        <button type="button" class="tog" id="btnSort" aria-pressed="false">排序</button>
+      </div>
+    </div>
+
+    <div class="bar">
+      <button type="button" class="ghost" id="btnCopy" disabled>复制</button>
+      <button type="button" class="go" id="btnGo">抽一个</button>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
